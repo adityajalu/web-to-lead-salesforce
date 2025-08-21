@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Web-to-Case Form</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-gray-100 flex justify-center py-10">
+
+  <div class="bg-white shadow-xl rounded-2xl p-8 w-full max-w-2xl">
+    <h2 class="text-2xl font-bold text-gray-800 mb-6">Submit a Case</h2>
+
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DgL000005xK7t" method="POST" class="space-y-5">
+      <input type="hidden" name="orgid" value="00DgL000005xK7t">
+      <input type="hidden" name="retURL" value="http://">
+      <input type="hidden" id="external" name="external" value="1">
+
+      <!-- Name -->
+      <div>
+        <label for="name" class="block text-sm font-medium text-gray-600">Contact Name</label>
+        <input id="name" name="name" type="text" maxlength="80" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500">
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-600">Email</label>
+        <input id="email" name="email" type="email" maxlength="80" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500">
+      </div>
+
+      <!-- Phone -->
+      <div>
+        <label for="phone" class="block text-sm font-medium text-gray-600">Phone</label>
+        <input id="phone" name="phone" type="text" maxlength="40" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500">
+      </div>
+
+      <!-- Subject -->
+      <div>
+        <label for="subject" class="block text-sm font-medium text-gray-600">Subject</label>
+        <input id="subject" name="subject" type="text" maxlength="80" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500">
+      </div>
+
+      <!-- Description -->
+      <div>
+        <label for="description" class="block text-sm font-medium text-gray-600">Description</label>
+        <textarea id="description" name="description" rows="4" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500"></textarea>
+      </div>
+
+      <!-- Type -->
+      <div>
+        <label for="type" class="block text-sm font-medium text-gray-600">Type</label>
+        <select id="type" name="type" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500">
+          <option value="">--Select--</option>
+          <option value="Mechanical">Mechanical</option>
+          <option value="Electrical">Electrical</option>
+          <option value="Electronic">Electronic</option>
+          <option value="Structural">Structural</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <!-- Product -->
+      <div>
+        <label for="00NgL000011VtYk" class="block text-sm font-medium text-gray-600">Product</label>
+        <select id="00NgL000011VtYk" name="00NgL000011VtYk" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500">
+          <option value="">--Select--</option>
+          <option value="GC1040">GC1040</option>
+          <option value="GC1060">GC1060</option>
+          <option value="GC3020">GC3020</option>
+          <option value="GC3040">GC3040</option>
+          <option value="GC3060">GC3060</option>
+          <option value="GC5020">GC5020</option>
+          <option value="GC5040">GC5040</option>
+          <option value="GC5060">GC5060</option>
+          <option value="GC1020">GC1020</option>
+        </select>
+      </div>
+
+      <!-- Company -->
+      <div>
+        <label for="company" class="block text-sm font-medium text-gray-600">Company</label>
+        <input id="company" name="company" type="text" maxlength="80" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500">
+      </div>
+
+      <!-- Submit Button -->
+      <div class="pt-4">
+        <button type="submit" class="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg shadow-md hover:bg-blue-700 transition">
+          Submit Case
+        </button>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
