@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Web-to-Lead Form</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-gray-100 flex justify-center py-10">
+
+  <div class="bg-white shadow-xl rounded-2xl p-8 w-full max-w-3xl">
+    <h2 class="text-2xl font-bold text-gray-800 mb-6">Contact Us</h2>
+    
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DgL000005xK7t" method="POST" class="space-y-6">
+      <input type="hidden" name="oid" value="00DgL000005xK7t">
+      <input type="hidden" name="retURL" value="http://">
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- First Name -->
+        <div>
+          <label for="first_name" class="block text-sm font-medium text-gray-600">First Name</label>
+          <input id="first_name" name="first_name" type="text" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500">
+        </div>
+        
+        <!-- Last Name -->
+        <div>
+          <label for="last_name" class="block text-sm font-medium text-gray-600">Last Name</label>
+          <input id="last_name" name="last_name" type="text" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500">
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Email -->
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-600">Email</label>
+          <input id="email" name="email" type="email" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500">
+        </div>
+
+        <!-- Company -->
+        <div>
+          <label for="company" class="block text-sm font-medium text-gray-600">Company</label>
+          <input id="company" name="company" type="text" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500">
+        </div>
+      </div>
+
+      <!-- City -->
+      <div>
+        <label for="city" class="block text-sm font-medium text-gray-600">City</label>
+        <input id="city" name="city" type="text" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500">
+      </div>
+
+      <!-- Country -->
+      <div>
+        <label for="country_code" class="block text-sm font-medium text-gray-600">Country</label>
+        <select id="country_code" name="country_code" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500">
+          <option value="">--Select--</option>
+          <option value="ID">Indonesia</option>
+          <option value="US">United States</option>
+          <option value="SG">Singapore</option>
+          <option value="MY">Malaysia</option>
+          <!-- tambahkan sesuai kebutuhan -->
+        </select>
+      </div>
+
+      <!-- Phone -->
+      <div>
+        <label for="phone" class="block text-sm font-medium text-gray-600">Phone</label>
+        <input id="phone" name="phone" type="text" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500">
+      </div>
+
+      <!-- Industry -->
+      <div>
+        <label for="industry" class="block text-sm font-medium text-gray-600">Industry</label>
+        <select id="industry" name="industry" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500">
+          <option value="">--Select--</option>
+          <option value="Technology">Technology</option>
+          <option value="Finance">Finance</option>
+          <option value="Retail">Retail</option>
+          <option value="Healthcare">Healthcare</option>
+        </select>
+      </div>
+
+      <!-- Submit -->
+      <div class="pt-4">
+        <button type="submit" class="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg shadow-md hover:bg-blue-700 transition">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
